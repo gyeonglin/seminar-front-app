@@ -12,8 +12,16 @@ app.get("/", (req, res, next) => {
 
 app.get("/api/article", (req, res, next) => {
   const boards: Board[] = [
-    { id: 141, content: "첫번째 게시글입니다.", created_at: new Date() },
-    { id: 145, content: "두번째 게시글입니다.", created_at: new Date() },
+    {
+      id: 141,
+      content: "첫번째 게시글입니다.",
+      created_at: new Date().toISOString(),
+    },
+    {
+      id: 145,
+      content: "두번째 게시글입니다.",
+      created_at: new Date().toISOString(),
+    },
   ];
 
   res.send(boards);
