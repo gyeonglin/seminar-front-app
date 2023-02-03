@@ -7,7 +7,12 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/api/article", (req, res, next) => {
-  res.send([{ id: 141, content: "첫번째 게시글입니다." }]);
+  const boards: Board[] = [
+    { id: 141, content: "첫번째 게시글입니다." },
+    { id: 145, content: "두번째 게시글입니다." },
+  ];
+
+  res.send(boards);
 });
 
 app.listen(3030, () => {
